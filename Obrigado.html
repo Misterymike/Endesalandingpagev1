@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado pela sua adesão! 🎉</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #0074d9;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+        .bonus {
+            background: #ffcc00;
+            color: black;
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #0074d9;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #0056a3;
+        }
+        .link-container {
+            margin: 20px 0;
+            padding: 10px;
+            background: #e8f4ff;
+            border-radius: 5px;
+        }
+        input {
+            width: 80%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🎉 Obrigado pela sua adesão à Endesa! 🎉</h1>
+        
+        <p>Parabéns! O seu pedido foi recebido e em breve entraremos em contacto.</p>
+        
+        <div class="bonus">🎁 Receba +30€ Extra!</div>
+        
+        <p>Quer ganhar mais 30€ na sua fatura? Basta recomendar um amigo!</p>
+        
+        <div class="link-container">
+            <p>Partilhe este link com os seus amigos:</p>
+            <input type="text" id="referral-link" value="https://presentiluminado.pt/?ref=SEUCODIGO" readonly>
+            <button class="btn" onclick="copiarLink()">📋 Copiar Link</button>
+        </div>
+
+        <script>
+            function copiarLink() {
+                var link = document.getElementById("referral-link");
+                link.select();
+                document.execCommand("copy");
+                alert("Link copiado! Partilhe com os seus amigos.");
+            }
+        </script>
+
+    </div>
+
+</body>
+</html>
